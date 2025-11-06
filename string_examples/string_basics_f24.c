@@ -3,7 +3,7 @@
 #include <string.h>
 
 int main() {
-	/*
+	/* Basic string usage */
 	char s1[6] = "Hello";
 	char s2[100] = "Hi";
 
@@ -15,25 +15,25 @@ int main() {
 	printf("Enter new s2: ");
 	scanf("%s", s2);			// s2 = &s2[0]
 	printf("Now, s2 = %s\n", s2);
-	*/
-	/* strlen() example *
+	
+	/* strlen() example */
 	int n = strlen(s2);
 	printf("%s contains %d characters\n", s2, n);
 	printf("Array needs %d characters\n", n + 1);
 
 	char s3[100];
-	*/
-	/* String copy examples *
+	
+	/* String copy examples */
 	strcpy(s3, s2);		// Copies from s2 to s3
 	strncpy(s3, s2, 2);	// Copies first 2 chars of s2 to s3
 						// Does not necessarily copy '\0'
 						//  If s2 == "This", s3 == { 'T', 'h' }
 	s3[2] = '\0';
-	*/
-	/* String compare examples *
+	
+	/* String compare examples */
 	if (strcmp(s1, s3) == 0)
 		printf("s1 & s3 match!\n");
-*/
+
 	/* String concatenation */
 	char s4[100] = "November ";
 	char s5[100] = "15, 2024";
