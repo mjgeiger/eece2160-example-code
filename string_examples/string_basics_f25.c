@@ -5,7 +5,7 @@ int main() {
 
     // Basic string declarations
     char s1[] = "Hello World!\n";
-    char s2[10] = "Hi";
+    char s2[10] = "Hi";     // { 'H', 'i', '\0' }
     s2[3] = 'x';
 
     // Printing/reading strings with printf() / scanf()
@@ -31,7 +31,18 @@ int main() {
         printf("s1 & s2 match?\n");
     }
 
-    
+    printf("Length of %s is %d\n", s1, strlen(s1));
+
+    strcat(s1, s2);
+    printf("Now, s1 = %s\n", s1);
+    strncat(s2, s1, 2);
+    printf("Now, s2 = %s\n", s2);
+
+    char s3[20];
+    printf("Enter entire line: ");
+    fgets(s3, 10, stdin);
+    printf("s3 = %s\n", s3);
+
     printf("\n\n");     // Extra space
     return 0;
 }

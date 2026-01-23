@@ -24,8 +24,6 @@ void printName(Name* n) {	// n->first == (*n).first
 
 // Prompt for and read information into existing Name
 void readName(Name* n) {
-	char dot;
-
 	printf("Enter name: ");
-	scanf("%s %c%c %s", n->first, &n->middle, &dot, n->last);
+	scanf("%s %c %s", n->first, &(n->middle), n->last);
 }

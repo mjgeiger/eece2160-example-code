@@ -18,11 +18,12 @@ int main() {
 	unsigned int searchID;	// ID to find student by
 	char searchLN[50];		// Last name to find student by
 	int index;				// Index of found student
-	/*
+	
 	Name n1 = { "Jill", 'X', "Smith" };
 	printName(&n1);
 	printf("%s", n1.first);
-
+	
+	/*	
 	SINew s1 = { { "John", 'Q', "Doe" }, 1, 1 };
 	printName(&(s1.sname));
 	printf("%s", s1.sname.first);

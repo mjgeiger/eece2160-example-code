@@ -26,7 +26,7 @@ void printStudent(SINew *s) {
 	printName(&s->sname);
 
 	// Print ID
-	printf("ID #%u\n", s->ID);
+	printf("ID: %u\n", s->ID);
 
 	// Print GPA
 	printf("GPA: %.2lf\n", s->GPA);
@@ -48,9 +48,11 @@ void readStudent(SINew* s) {
 
 // Print list of students (all data for each student)
 void printList(SINew list[], int n) {
-	for (int i = 0; i < n; i++) {
+	int i;
+
+	for (i = 0; i < n; i++) {
 		printStudent(&list[i]);
-		printf("\n");
+		printf("\n");			// Blank line between students
 	}
 }
 
@@ -59,7 +61,8 @@ void printList(SINew list[], int n) {
 int findByLName(SINew list[], int n, char lname[]) {
 
 	// Search all elements of array
-	for (int i = 0; i < n; i++) {
+	int i;
+	for (i = 0; i < n; i++) {
 		if (strcmp(lname, list[i].sname.last) == 0)
 			return i;
 	}
@@ -73,7 +76,8 @@ int findByLName(SINew list[], int n, char lname[]) {
 int findByID(SINew list[], int n, unsigned int sID) {
 
 	// Search all elements of array
-	for (int i = 0; i < n; i++) {
+	int i;
+	for (i = 0; i < n; i++) {
 		if (sID == list[i].ID)
 			return i;
 	}

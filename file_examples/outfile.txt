@@ -1,0 +1,1 @@
+First 3 values: 21 60 1

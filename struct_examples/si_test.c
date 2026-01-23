@@ -11,8 +11,16 @@ int main() {
 	StudentInfo student1 = { "Michael", 'J', "Geiger",
 							 12345678, 1.23 };
 	StudentInfo student2;
+
 	StudentInfo list[10];
-	StudentInfo* sp;
+	StudentInfo* sptr = &student1;
+
+	double av = avgGPA(list, 10);
+
+	// Examples of structure accesses
+	student1.GPA = 3.5;	// Single struct: 	.
+	list[0].GPA = 3.75;	// Struct in array: .
+	sptr->GPA = 3.9;	// Pointer:			->
 
 	printf("%s %s\n", student1.first, student1.last);
 	
@@ -36,5 +44,5 @@ int main() {
 
 int compare(StudentInfo* p1, StudentInfo* p2) {
 	if (p1->GPA == p2->GPA)		// p1->GPA same as (*p1).GPA
-		return 1;
+		printf("Match!\n");
 }
