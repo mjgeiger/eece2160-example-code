@@ -16,18 +16,15 @@ int main() {
 	scanf("%d %d", &a, &x);
 
 	switch (a) {
-	case 0:				// if (a == 0)
+	case 0:					// if (a == 0)
 		x = x + 1;
 		break;
-
-	case 1: case 2:		// else if (a == 1 || a == 2)
+	case 1: case 2:			// else if (a == 1 || a == 2)
 		x = x - 1;
 		break;
-
-	default:			// else
+	default:				// else
 		x = 100;
 	}
-
 	printf("x = %d\n", x);
 
 	// Example below demonstrates switch statement that wouldn't

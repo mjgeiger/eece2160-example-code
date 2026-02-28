@@ -14,24 +14,37 @@
 
 int main() {
 	int i;			// Loop index
-
+	int iSquared;
+	/*
 	printf(" i         i^2\n");
 	
-	/*
-	* ORDER OF OPERATIONS IN FOR LOOP
-	* 1. Initialize loop index--executes exactly once
-	* 2. At the start of each iteration, test loop condition
-	*    If true, execute entire loop body
-	* 3. After loop body executes, update loop index
-	*/
-	for (i = 0; i <= 10; i = i + 1) {
-		printf("%2d%10d\n", i, i * i);
+	i = 0;
+	while (i <= 10) {
+		iSquared = i * i;
+		printf("%2d%10d\n", i, iSquared);
+		i = i + 1;
 	}
+		
+	// Equivalent for loop
+	// Order of operations:
+	// 1. Initialize loop index (i = 0)
+	// 2. For each iteration:
+	// 		a. Check loop condition (i <= 10)
+	//		b. Entire loop body
+	//		c. Change loop index (i = i + 1)
+	//		d. Return to step a.
+	for (i = 10; i >= 0; i = i - 1) 
+		printf("%2d%10d\n", i, i * i);
+	
+	for (i = 0; i < 100; i += 3)
+		printf("%d ", i);
+	*/
 
 	int j;
-	for (i = 0; i < 3; i++) {		// Outer loop
-		for (j = 0; j < 5; j++) {	// Inner loop
-			printf("%d %d\n", i, j);
+
+	for (i = 0; i < 4; i++) {
+		for (j = 0; j < 3; j++) {
+			printf("%d %d\n", i, j);		
 		}
 	}
 

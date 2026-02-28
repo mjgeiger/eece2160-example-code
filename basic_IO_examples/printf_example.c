@@ -13,10 +13,11 @@
 int main() {
 	int x;				// Uninitialized (and unused) variable
 	int y = 5;			// Initialized integer
-	double z = 9.9;		// Initialized double
-	
+	double z = 9.92675832;		// Initialized double
+	char ch = 'x';
+
 	// Simple print statements for different number formats
-	printf("y = %d\n", y);
+	printf("y = %d, ch = %c\n", y, ch);
 
 	printf("z = %lf\n", z);
 	printf("z with precision 2 = %.2lf\n", z);

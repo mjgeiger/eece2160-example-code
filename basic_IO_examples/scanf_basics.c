@@ -16,6 +16,12 @@ int main() {
 	char c1, c2, c3;	// Input chars
 	int nvals;		// scanf() return value
 
+	printf("Enter two numbers and a character: ");
+	nvals = scanf(" %c %d %lf%c", &c2, &x, &z, &c1);
+	printf("x = %d, z = %lf, c1 = %c, c2 = %c?\n", x, z, c1, c2);
+	printf("nvals = %d\n", nvals);
+
+	/*
 	// c1 can be any character; c2 and c3 will be non-space chars
 	//   &x = "address of x"
 	printf("Enter an integer followed by 3 characters: ");
@@ -33,6 +39,6 @@ int main() {
 
 	printf("x = %d, y = %d, z = %lf\n", x, y, z);
 	printf("scanf() read %d values\n", nvals);
-
+	*/
 	return 0;
 }

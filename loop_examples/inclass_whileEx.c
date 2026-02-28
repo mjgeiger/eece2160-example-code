@@ -9,13 +9,13 @@
 
 int main() {
 
-	// First example: print all multiples of 3 < 100
+	// First example: print all multiples of 3 < 100, including 0
 	printf("MULTIPLES OF 3:\n");
 	int i = 0;
-	while (i <= 100) {
+	do {
 		printf("%d ", i);
 		i = i + 3;
-	}
+	} while (i < 100);
 	printf("\n");
 
 	// 2nd example: given 2 vars x & y, repeatedly
@@ -24,7 +24,7 @@ int main() {
 	printf("INCREMENT/DECREMENT:\n");
 
 	int x, y;			// Input values
-	int count = 0;		// # of iterations
+	int count = 0;		// Iteration counter
 
 	printf("Enter x and y: ");
 	scanf("%d %d", &x, &y);
@@ -34,8 +34,8 @@ int main() {
 		y = y - 1;
 		count = count + 1;
 	}
-	printf("Number of iterations: %d\n", count);
-	
+	printf("%d iterations\n", count);
+
 	// 3rd example: repeatedly prompt for & read
 	//   non-space char into cmd until user enters
 	//   either 'X' or 'x'
@@ -44,7 +44,7 @@ int main() {
 	do {
 		printf("Enter command: ");
 		scanf(" %c", &cmd);
-	} while (cmd != 'X' && cmd != 'x');
+	} while (cmd != 'x' && cmd != 'X');
 
 	return 0;
 }

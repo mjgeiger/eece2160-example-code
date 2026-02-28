@@ -17,24 +17,19 @@ int main() {
 	printf(" i       i ^ 2\n");
 
 	i = 0;
-	while (i <= 10) {			// 1. Test loop condition
-								// 2. If true, execute body
+	while (i >= 10) {
 		iSquared = i * i;
 		printf("%2d%10d\n", i, iSquared);
 		i = i + 1;
 	}
-
-	printf("At end, i = %d\n", i);
-
-	// Do-while example
+	printf("After loop, i = %d\n", i);
+	
 	i = 0;
 	do {
 		iSquared = i * i;
 		printf("%2d%10d\n", i, iSquared);
 		i = i + 1;
-	} while (i <= 10);
-
-	printf("At end, i = %d\n", i);
+	} while (i >= 10);
 
 	return 0;
 }
