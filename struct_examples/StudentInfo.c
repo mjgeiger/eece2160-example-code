@@ -15,12 +15,11 @@ void printStudent(StudentInfo* sp) {
 
 // Calculate average GPA for array of students
 double avgGPA(StudentInfo stlist[], unsigned n) {
-	double total = 0;
 	int i;
+	double total = 0;
 
-	for (i = 0; i < n; i++) {
+	for (i = 0; i < n; i++) 
 		total = total + stlist[i].GPA;
-	}
 
 	return total / n;
 }
@@ -33,8 +32,7 @@ StudentInfo readStudent() {
 
 	// Read everything into temp
 	printf("Enter name: ");
-	scanf("%s %c %s", temp.first, &temp.middle, 
-		temp.last);
+	scanf("%s %c %s", temp.first, &temp.middle, temp.last);
 	printf("Enter ID: ");
 	scanf("%u", &temp.ID);
 	printf("Enter GPA: ");

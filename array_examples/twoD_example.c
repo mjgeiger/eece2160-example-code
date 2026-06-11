@@ -18,6 +18,7 @@ int main() {
 		{ {  10,  2.5,    0,  1.5},
 		  {-2.3, -1.1, -0.2,    0},
 		  {10.5, -6.1, 23.4, -9.2} };
+	  
 
 	int negCnt[NRows] = { 0 };	// Initialize entire row count array to 0
 	int i, j;                   // Row and column indices

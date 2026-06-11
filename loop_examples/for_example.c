@@ -15,17 +15,9 @@
 int main() {
 	int i;			// Loop index
 	int iSquared;
-	/*
+	
 	printf(" i         i^2\n");
 	
-	i = 0;
-	while (i <= 10) {
-		iSquared = i * i;
-		printf("%2d%10d\n", i, iSquared);
-		i = i + 1;
-	}
-		
-	// Equivalent for loop
 	// Order of operations:
 	// 1. Initialize loop index (i = 0)
 	// 2. For each iteration:
@@ -33,12 +25,14 @@ int main() {
 	//		b. Entire loop body
 	//		c. Change loop index (i = i + 1)
 	//		d. Return to step a.
-	for (i = 10; i >= 0; i = i - 1) 
+	for (i = 0; i <= 10; i++) 
 		printf("%2d%10d\n", i, i * i);
 	
-	for (i = 0; i < 100; i += 3)
+	// i = 11 after loop
+	int n = ++i;	// i = i + 1 = 12, then n = i = 12 
+	
+	for (i = 0; i < 100; i += 3)	// i = i + 3
 		printf("%d ", i);
-	*/
 
 	int j;
 

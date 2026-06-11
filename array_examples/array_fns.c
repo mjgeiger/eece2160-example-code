@@ -17,28 +17,28 @@
 // Given an array of doubles that contains n values,
 //   calculate and return the average of those values
 double findAvg(double arr[], int n) {
-	double total = 0;
+	int i;
+	double sum = 0;
 
-	for (unsigned i = 0; i < n; i++)
-		total += arr[i];	// total = total + arr[i]
+	for (i = 0; i < n; i++)
+		sum = sum + arr[i];
 
-	return total / n;
+	return sum / n;
 }
 
 // Given an array of integers that contains n values,
 //   find and return the maximum (i.e., most positive) value
 //   in the array
 int findMax(int arr[], int n) {
-	int curMax = arr[0];			// Can't assume arr[] contains
-									//   only positive values--
-									//   initializing curMax = 0 is common error
+	int max = arr[0];
+	int i;
 
-	for (int i = 1; i < n; i++) {
-		if (arr[i] > curMax)
-			curMax = arr[i];
+	for (i = 1; i < n; i++) {
+		if (arr[i] > max)
+			max = arr[i];
 	}
 
-	return curMax;
+	return max;
 }
 
 /*
@@ -56,7 +56,7 @@ double find2DAvg(double arr2[][5], int nr) {
 
 	for (int i = 0; i < nr; i++) {
 		for (int j = 0; j < 5; j++) {
-			sum += arr[i][j];
+			sum += arr2[i][j];
 		}
 	}
 

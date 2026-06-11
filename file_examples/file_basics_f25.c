@@ -6,36 +6,25 @@ int main()
     int v1, v2, v3;
     char fname[50];
 
-    fp = fopen("file1.txt", "r"); // First arg: name
-                                  // Second arg: access mode
-                                  // "r" = read
-                                  // "w" = write
-                                  // "a" = append
-                                  // "rb", "wb", "ab" -- binary
-    if (fp == NULL)
-    {
-        printf("Error: cannot open file1.txt, using stdin\n");
+    fp = fopen("file1.txt", "r"); // First arg: file name/path
+                                   // Second arg: access mode
+                                   // "r", "w", "a" --> text file
+                                   //   Read, write, append
+                                   // "rb", "wb", "ab" --> binary file
+    if (fp == NULL) {
+        printf("Could not open file1.txt; reading from stdin\n");
         fp = stdin;
     }
+    // Do something with the file
+    fscanf(fp, "%d %d %d", &v1, &v2, &v3);
 
-    int count = 0;
-    while (fscanf(fp, "%d", &v1) != EOF) {
-        printf("Current input: %d\n", v1);
-        count++;
-    }
-    printf("Total fscanf() calls: %d\n", count + 1);
-
-    /*
-    FILE *fp2 = fopen("outfile.txt", "w");
+    FILE *fp2 = fopen("out.txt", "w");
     if (fp2 == NULL)
-    {
-        printf("Couldn't open outfile.txt; using stdout\n");
         fp2 = stdout;
-    }
-    fprintf(fp2, "First 3 values: %d %d %d\n", v1, v2, v3);
-
+        
+    fprintf(fp2, "Three inputs: %d %d %d\n", v1, v2, v3);
     fclose(fp2);
-    */
+
     fclose(fp);
 
     return 0;

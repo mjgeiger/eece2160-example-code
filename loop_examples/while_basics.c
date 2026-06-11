@@ -17,7 +17,7 @@ int main() {
 	printf(" i       i ^ 2\n");
 
 	i = 0;
-	while (i >= 10) {
+	while (i <= 10) {
 		iSquared = i * i;
 		printf("%2d%10d\n", i, iSquared);
 		i = i + 1;
@@ -29,7 +29,7 @@ int main() {
 		iSquared = i * i;
 		printf("%2d%10d\n", i, iSquared);
 		i = i + 1;
-	} while (i >= 10);
+	} while (i <= 10);
 
 	return 0;
 }
