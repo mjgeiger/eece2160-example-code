@@ -1,15 +1,11 @@
 #include <stdio.h>
 
 int main() {
-    double a, b;
-    int x, y;
-    int z = 0;
-
-    char ch = 'a';
-
-    scanf("%d %d", &x, &y);
-
-    double r_sph, rCyl;
-
+    int rCyl, rSph;
+    int r, R;       // NO NO NO NO NO NO NO NO NO 
+    int abc, ABC, aBc, Abc;
+    double d1;
+    char c = 'r';
+    
     return 0;
 }

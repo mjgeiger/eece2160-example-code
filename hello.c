@@ -1,22 +1,19 @@
-/*
-    Michael Geiger
-    Brief example program for basic program structure
-    EECE.2160
-    1/23/26
+/* 
+    EECE.1160: ECE Application Programming
+    M. Geiger
+    9/4/2026
+    Basic intro program
 */
 
 #include <stdio.h>
 
 int main() {
-    printf("Hello World!\n");       // Prints "Hello World!"
+    int x = 10;
+    int y, z;
 
-    int x, y;
-
-    printf("Enter x and y: ");
-    scanf("%d %d", &x, &y);     // &x = address of x
-
-    printf("x = %d\n", x);
-    printf("x / 150 = %d, 2x = %d\n", x / 150, 2 * x);
-
+    printf("Enter three integers: ");
+    scanf("%d %d %d", &x, &y, &z);
+    printf("x = %d, x squared = %d\n", x, x * x);
+    printf("y = %d, z = %d\n", y, z);
     return 0;
 }

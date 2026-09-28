@@ -31,10 +31,10 @@ int main() {
 	if (temp >= 90)
 		printf("It's too hot!\n");
 	else if (temp <= 32)
-		printf("It's freezing!\n");
-	else 
+		printf("It's too cold!\n");
+	else
 		printf("It's okay\n");
-
+	
 	// Part 3: prompt for and read three inputs
 	//   and detect format errors
 	int v1, v2, v3;
@@ -42,8 +42,8 @@ int main() {
 
 	printf("Enter 3 integers: ");
 	num = scanf("%d %d %d", &v1, &v2, &v3);
-	if (num < 3)
-		printf("Only %d values entered\n", num);
+	if (num != 3)
+		printf("Only %d inputs read correctly\n", num);
 
 	return 0;
 }

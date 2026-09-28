@@ -16,16 +16,29 @@ int main() {
 	scanf("%d %d", &a, &x);
 
 	switch (a) {
-	case 0:					// if (a == 0)
+	case 0:				// if (a == 0)
 		x = x + 1;
 		break;
-	case 1: case 2:			// else if (a == 1 || a == 2)
+	case 1: case 2:		// else if (a == 1 || a == 2)
 		x = x - 1;
 		break;
-	default:				// else
+	default:			// else
 		x = 100;
 	}
 	printf("x = %d\n", x);
+
+	char bldg;
+	scanf(" %c", &bldg);
+	switch (bldg) {
+		case 'S': case 'F':
+			printf("Go to Perry Hall\n");
+		case 'P':
+			printf("Go to Ball Hall\n");
+		case 'B':
+			printf("Go to 3rd floor, go to end of hall\n");
+	}
+
+
 
 	// Example below demonstrates switch statement that wouldn't
 	//    need default case--val % 4 only has 4 possible values,

@@ -7,22 +7,18 @@ int main() {
     scanf("%d %d %d", &A, &B, &X);
 
     /*
-        Comparisons:
-        ==      !=      equal / not equal
-        <       >       less than / greater than
-        <=      >=      lte / gte
-        Operators:
-        &&              AND
-        ||              OR
-        !               NOT
+        COMPARISONS
+            ==      !=      equal/not equal
+            <       >       less than/greater than
+            <=      >=      LTE/GTE
     */
-    if (A == 0) {      
+    if (A == 0) {
         X = X + 1;
     }
-    else if (B == 1) {      
+    else if (B == 1) {  // Only get here if A != 0
         X = X - 1;
     }
-    else {                  
+    else {          // Only get here if A != 0 && B != 1
         X = 0;
     }
 
