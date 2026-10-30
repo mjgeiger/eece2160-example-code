@@ -27,17 +27,6 @@ int main() {
 	}
 	printf("x = %d\n", x);
 
-	char bldg;
-	scanf(" %c", &bldg);
-	switch (bldg) {
-		case 'S': case 'F':
-			printf("Go to Perry Hall\n");
-		case 'P':
-			printf("Go to Ball Hall\n");
-		case 'B':
-			printf("Go to 3rd floor, go to end of hall\n");
-	}
-
 
 
 	// Example below demonstrates switch statement that wouldn't

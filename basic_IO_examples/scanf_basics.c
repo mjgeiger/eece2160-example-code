@@ -17,7 +17,7 @@ int main() {
 	int nvals;		// scanf() return value
 
 	printf("Enter two numbers and a character: ");
-	nvals = scanf(" %c %d %lf%c", &c2, &x, &z, &c1);
+	nvals = scanf("%c %d %lf%c", &c2, &x, &z, &c1);
 	printf("x = %d, z = %lf, c1 = %c, c2 = %c?\n", x, z, c1, c2);
 	printf("nvals = %d\n", nvals);
 

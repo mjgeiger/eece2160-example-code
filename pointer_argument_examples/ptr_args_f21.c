@@ -4,9 +4,10 @@
 void f1(int* p1, int* p2);
 
 int main() {
-	int x = 21, y = 60;
+	int x, y;
 	
-	printf("x = %d, y = %d\n", x, y);
+	scanf("%d %d", &x, &y);
+	printf("x = %d, y = %d\n", &x, y);
 
 	f1(&x, &y);		// p1 = &x,  p2 = &y
 

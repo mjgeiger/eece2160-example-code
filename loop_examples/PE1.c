@@ -3,50 +3,57 @@
 int main()
 {
     char cmd;     // Input command
-    int n, nVals; // Numeric input & # inputs
+    int n, nVals;
+    
+    // Input process
     int flag;
     do {
+        flag = 0;
         printf("Enter cmd and n: ");
         nVals = scanf(" %c %d", &cmd, &n);
-        if (nVals < 2) {
+        if (nVals != 2) {
             printf("Formatting error!\n");
+            flag = 1;
 
-            // Line-clearing loop
+            // Clear line
             char junk;
             do {
                 scanf("%c", &junk);
             } while (junk != '\n');
         }
-    } while (nVals < 2);
+        else if (n < 0) {
+            flag = 1;
+            printf("Negative n\n");
+        }
+    } while (flag == 1);
 
-    int result, i; // Loop index & result for n!, 2^n
+    // Factorial
+    int result;
+    int i;
+    result = 1;
+    for (i = n; i > 1; i--)
+        result = result * i;
+    printf("%d! = %d\n", n, result);
 
-    switch (cmd)
-    {
-    case 'F':
-    case 'f':
-        // Factorial
-        result = 1;
-        for (i = n; i > 1; i--)
-            result *= i;
-        printf("%d! = %d\n", n, result);
-        break;
+    // 2^n
+    result = 1;
+    for (i = 0; i < n; i++)
+        result = result * 2;
+    printf("2^%d = %d\n", n, result);
 
-    case 'P':
-    case 'p':
-        // 2^n
-        result = 1;
-        for (i = 0; i < n; i++)
-            result *= 2;
-        printf("2^%d = %d\n", n, result);
-        break;
+    int j;
 
-    case 'X':
-    case 'x':
-        return 0;
+    // NESTED LOOP EXAMPLE
+    for (i = 0; i < 5; i++) {       // ROUND
+        printf("i = %d\n", i);
+        
+        for (j = 0; j < 5; j++) {   // GUESSES
+            printf("%d %d\n", i, j);
+        }
 
-    default:
-        printf("Invalid command %c\n", cmd);
+        // ROUND DONE; GO TO NEXT ROUND
     }
+
+
     return 0;
 }

@@ -22,6 +22,11 @@ int main() {
         X = 0;
     }
 
+    if (X >= 10 && X <= 20)
+        printf("in range\n");
+    if (X < 10 || X > 20)
+        printf("out of range");
+
     printf("X = %d\n", X);
 
     return 0;
